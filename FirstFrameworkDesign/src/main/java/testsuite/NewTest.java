@@ -28,6 +28,8 @@ public class NewTest {
 	  LaunchBrowser lb = new LaunchBrowser();
 	  driverlaunch = lb.OpenBrowser(driverlaunch, browsernameval);
 	  lb.implicitWait(driverlaunch, 15, TimeUnit.SECONDS);
+	  lb.navigateurl(driverlaunch, urlvalue);
+	  lb.implicitWait(driverlaunch, 15, TimeUnit.SECONDS);
 	  lb.closedriver(driverlaunch);
 	  
   }
