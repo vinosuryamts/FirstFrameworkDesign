@@ -63,6 +63,13 @@ public WebDriver driver=null;
 		driver = sysdriver;
 		driver.close();
 	}
+	
+	public void navigatetobrowser(WebDriver sysdriver,String url) {
+		driver = sysdriver;
+		driver.get(url);		
+	}
+	
+	
 }
 	
 	
