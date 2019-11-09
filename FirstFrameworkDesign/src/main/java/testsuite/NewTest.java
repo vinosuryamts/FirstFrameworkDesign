@@ -30,6 +30,7 @@ public class NewTest {
 	  lb.implicitWait(driverlaunch, 15, TimeUnit.SECONDS);
 	  lb.navigatetobrowser(driverlaunch,urlvalue);
 	  lb.implicitWait(driverlaunch, 15, TimeUnit.SECONDS);
+	  lb.implicitWait(driverlaunch, 15, TimeUnit.SECONDS);
 	  lb.closedriver(driverlaunch);
 	  
   }
