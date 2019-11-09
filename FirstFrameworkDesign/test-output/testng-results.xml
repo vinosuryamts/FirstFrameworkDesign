@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="33998" started-at="2019-11-09T07:54:40Z" finished-at="2019-11-09T07:55:14Z">
+  <suite name="Suite" duration-ms="36551" started-at="2019-11-09T12:51:42Z" finished-at="2019-11-09T12:52:19Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="33998" started-at="2019-11-09T07:54:40Z" finished-at="2019-11-09T07:55:14Z">
+    <test name="Test" duration-ms="36551" started-at="2019-11-09T12:51:42Z" finished-at="2019-11-09T12:52:19Z">
       <class name="testsuite.NewTest">
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testsuite.NewTest@754ba872]" name="f" duration-ms="11091" started-at="2019-11-09T07:54:40Z" data-provider="dp" finished-at="2019-11-09T07:54:51Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testsuite.NewTest@754ba872]" name="f" duration-ms="11310" started-at="2019-11-09T12:51:43Z" data-provider="dp" finished-at="2019-11-09T12:51:54Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testsuite.NewTest@754ba872]" name="f" duration-ms="10431" started-at="2019-11-09T07:54:51Z" data-provider="dp" finished-at="2019-11-09T07:55:02Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testsuite.NewTest@754ba872]" name="f" duration-ms="12929" started-at="2019-11-09T12:51:54Z" data-provider="dp" finished-at="2019-11-09T12:52:07Z">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testsuite.NewTest@754ba872]" name="f" duration-ms="11780" started-at="2019-11-09T07:55:02Z" data-provider="dp" finished-at="2019-11-09T07:55:14Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testsuite.NewTest@754ba872]" name="f" duration-ms="11565" started-at="2019-11-09T12:52:07Z" data-provider="dp" finished-at="2019-11-09T12:52:19Z">
           <params>
             <param index="0">
               <value>
