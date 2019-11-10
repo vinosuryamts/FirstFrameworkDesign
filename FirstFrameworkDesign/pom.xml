@@ -29,6 +29,7 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            
         </plugins>
     </build>
 	
@@ -111,6 +112,20 @@
 				
 		
 	</dependencies> 
+	
+	<repositories>
+        <repository>
+            <id>myMavenRepo.read</id>
+            <url>https://mymavenrepo.com/repo/i1cOFtytYDOnrJpqjPob/</url>
+        </repository>
+    </repositories>
+    
+    <distributionManagement>
+        <repository>
+            <id>myMavenRepo.write</id>
+            <url>https://mymavenrepo.com/repo/7lHgpiqstwz9PXAzlpxB/</url>
+        </repository>
+    </distributionManagement>
   
 </project>
 
