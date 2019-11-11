@@ -44,7 +44,7 @@ public WebDriver driver=null;
 				System.setProperty("webdriver.opera.driver", ".\\driver\\operadriver.exe");
 				OperaOptions options = new OperaOptions();
 			    options.setBinary(new File("C:\\Users\\FALMS\\AppData\\Local\\Programs\\Opera\\64.0.3417.92\\opera.exe"));
-				driver = new OperaDriver();
+				driver = new OperaDriver(options);
 				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 				break;
