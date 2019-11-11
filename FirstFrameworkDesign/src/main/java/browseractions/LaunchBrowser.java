@@ -1,5 +1,6 @@
 package browseractions;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -62,11 +63,17 @@ public WebDriver driver=null;
 	public void closedriver(WebDriver sysdriver) {
 		driver = sysdriver;
 		driver.close();
+		try {
+			Runtime.getRuntime().exec("taskkill /f /im opera.exe");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void navigateurl(WebDriver sysdriver,String url) {
 		driver = sysdriver;
-		driver.get(url);
+		driver.get(url);		
 	}
 	
 }
