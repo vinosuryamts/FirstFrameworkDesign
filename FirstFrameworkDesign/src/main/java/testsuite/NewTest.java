@@ -23,7 +23,7 @@ public class NewTest {
 	
 	
   @Test(dataProvider = "dp")
-  public void f(String browsernameval, String urlvalue) {
+  public void launchBrowserurl(String browsernameval, String urlvalue) {
 	  
 	  System.out.println(browsernameval+"   "+urlvalue);
 	  LaunchBrowser lb = new LaunchBrowser();
