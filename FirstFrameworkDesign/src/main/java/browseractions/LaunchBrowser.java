@@ -73,7 +73,7 @@ public WebDriver driver=null;
 	
 	public void navigateurl(WebDriver sysdriver,String url) {
 		driver = sysdriver;
-		driver.get(url);		
+		driver.get(url);		 
 	}
 	
 }
