@@ -1,5 +1,6 @@
 package browseractions;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -8,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class LaunchBrowser {
@@ -40,6 +42,8 @@ public WebDriver driver=null;
 			
 			case "Opera":
 				System.setProperty("webdriver.opera.driver", ".\\driver\\operadriver.exe");
+				OperaOptions options = new OperaOptions();
+			    options.setBinary(new File("C:\\Users\\FALMS\\AppData\\Local\\Programs\\Opera\\64.0.3417.92\\opera.exe"));
 				driver = new OperaDriver();
 				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
