@@ -64,15 +64,10 @@ public WebDriver driver=null;
 		driver.manage().timeouts().implicitlyWait(second, timeunits);		
 	}
 	
-	public void closedriver(WebDriver sysdriver) {
+	public void closedriver(WebDriver sysdriver){
 		driver = sysdriver;
 		driver.close();
-		try {
-			Runtime.getRuntime().exec("taskkill /f /im opera.exe");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//Runtime.getRuntime().exec("taskkill /f /im opera.exe");
 	}
 	
 	public void navigateurl(WebDriver sysdriver,String url) {
