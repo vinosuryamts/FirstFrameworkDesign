@@ -67,7 +67,12 @@ public WebDriver driver=null;
 	public void closedriver(WebDriver sysdriver){
 		driver = sysdriver;
 		driver.close();
-		//Runtime.getRuntime().exec("taskkill /f /im opera.exe");
+		try {
+			Runtime.getRuntime().exec("taskkill /f /im opera.exe");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void navigateurl(WebDriver sysdriver,String url) {
