@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.openqa.selenium.WebDriver;
+import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -34,6 +35,11 @@ public class NewTest {
 	  lb.implicitWait(driverlaunch, 15, TimeUnit.SECONDS);
 	  lb.closedriver(driverlaunch);
 	  
+  }
+  
+  @Test
+  public void skiptest() {
+	  throw new SkipException("Skipping this exception");
   }
 
   @DataProvider
