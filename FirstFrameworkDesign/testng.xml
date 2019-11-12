@@ -4,6 +4,11 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="testsuite.NewTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Test1">
+    <classes>
       <class name="testsuite.NewTest"/>
     </classes>
   </test> <!-- Test -->
