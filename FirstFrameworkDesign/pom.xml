@@ -33,10 +33,12 @@
                 the code -->
             
             <plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin-version}</version>
                 <configuration>
-                    <source>3.1</source>
-                    <target>3.1</target>
+                    <source>2.3.2</source>
+                    <target>2.3.2</target>
                 </configuration>
             </plugin>
             
