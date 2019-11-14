@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite1">
-              <span class="suite-name border-passed">Suite1</span>
+              <span class="suite-name border-skipped">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods skipped suite-Suite1"> (hide)</a> <!-- hide-methods skipped suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods skipped suite-Suite1"> (show)</a> <!-- show-methods skipped suite-Suite1 -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite1">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="testsuite.NewTest" hash-for-method="skiptest">skiptest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite1 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +116,7 @@
                     <div class="method-list-content passed suite-Suite1">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="testsuite.NewTest" hash-for-method="f(Firefox, https://google.com)">f(Firefox, https://google.com)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="testsuite.NewTest" hash-for-method="f(Chrome, https://flipkart.com)">f(Chrome, https://flipkart.com)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="testsuite.NewTest" hash-for-method="f(Opera, https://amazon.com)">f(Opera, https://amazon.com)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="testsuite.NewTest" hash-for-method="launchBrowserurl(Chrome, https://flipkart.com)">launchBrowserurl(Chrome, https://flipkart.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -127,6 +131,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1" class="panel Suite1">
+          <div class="suite-Suite1-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testsuite.NewTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="skiptest">
+                  </a> <!-- skiptest -->
+                  <span class="method-name">skiptest</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping this exception
+	at testsuite.NewTest.skiptest(NewTest.java:44)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-skipped -->
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -135,26 +159,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="f(Firefox, https://google.com)">
-                  </a> <!-- f(Firefox, https://google.com) -->
-                  <span class="method-name">f</span>
-                  <span class="parameters">(Firefox, https://google.com)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="f(Chrome, https://flipkart.com)">
-                  </a> <!-- f(Chrome, https://flipkart.com) -->
-                  <span class="method-name">f</span>
+                  <a name="launchBrowserurl(Chrome, https://flipkart.com)">
+                  </a> <!-- launchBrowserurl(Chrome, https://flipkart.com) -->
+                  <span class="method-name">launchBrowserurl</span>
                   <span class="parameters">(Chrome, https://flipkart.com)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="f(Opera, https://amazon.com)">
-                  </a> <!-- f(Opera, https://amazon.com) -->
-                  <span class="method-name">f</span>
-                  <span class="parameters">(Opera, https://amazon.com)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -169,6 +177,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite1&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;customreport.VinodCustomReport&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testsuite.NewTest&quot;/&gt;
@@ -211,24 +222,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'f')
+data.setCell(0, 1, 'launchBrowserurl')
 data.setCell(0, 2, 'testsuite.NewTest')
-data.setCell(0, 3, 16551);
+data.setCell(0, 3, 28729);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'f')
+data.setCell(1, 1, 'skiptest')
 data.setCell(1, 2, 'testsuite.NewTest')
-data.setCell(1, 3, 15488);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'f')
-data.setCell(2, 2, 'testsuite.NewTest')
-data.setCell(2, 3, 10712);
+data.setCell(1, 3, 1);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -256,16 +263,12 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testsuite.NewTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">f(Chrome, https://flipkart.com)</span>
+                <span class="method-name">launchBrowserurl(Chrome, https://flipkart.com)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">f(Opera, https://amazon.com)</span>
-                <span class="method-start">15496 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">f(Firefox, https://google.com)</span>
-                <span class="method-start">26211 ms</span>
+                <span class="method-name">skiptest</span>
+                <span class="method-start">28736 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

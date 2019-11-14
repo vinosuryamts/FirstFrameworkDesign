@@ -6,31 +6,47 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.ArrayList;
 
 public class testforhtml {
 	
 	static String SeleniumTest = "Vinod";
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		StringBuilder htmlStringBuilder=new StringBuilder();
-		htmlStringBuilder.append("<html><head><title>"+SeleniumTest+"</title></head>");
+	StringBuilder filecontentval;
+		
+	public void generateReports(String path,String filename,ArrayList<String> suitename) {
+		
+		filecontentval = new StringBuilder();
+		filecontentval = generatefilecontent(path,suitename);
+		
 		try {
-			WriteToFile(htmlStringBuilder.toString(),"testfile.html");
+			WriteToFile(path,filecontentval.toString(),filename+".html");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 	
-	public static void WriteToFile(String fileContent, String fileName) throws IOException {
-        String projectPath = System.getProperty("user.dir");
+	
+	public StringBuilder generatefilecontent(String path,ArrayList<String> suitename) {
+		
+		StringBuilder htmlStringBuilder=new StringBuilder();
+		
+		htmlStringBuilder.append("<html><head><title>"+suitename.get(0).toString()+"</title></head>");
+		
+		return htmlStringBuilder;
+		
+	}
+	
+	public static void WriteToFile(String path,String fileContent, String fileName) throws IOException {
+        String projectPath = path;
         String tempFile = projectPath + File.separator+fileName;
         File file = new File(tempFile);
         // if file does exists, then delete and create a new file
         if (file.exists()) {
             try {
-                File newFileName = new File(projectPath + File.separator+ "backup_"+fileName);
+            	file.delete();
+                File newFileName = new File(projectPath + File.separator+ fileName);
                 file.renameTo(newFileName);
                 file.createNewFile();
             } catch (IOException e) {

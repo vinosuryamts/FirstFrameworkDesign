@@ -7,10 +7,12 @@ import java.util.concurrent.TimeUnit;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.openqa.selenium.WebDriver;
 import org.testng.SkipException;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import browseractions.LaunchBrowser;
+import customreport.VinodCustomReport;
 import exceloperations.ExcelActions;
 
 public class NewTest {
@@ -41,7 +43,8 @@ public class NewTest {
   public void skiptest() {
 	  throw new SkipException("Skipping this exception");
   }
-
+  
+  
   @DataProvider
   public Object[][] dp() {
    
